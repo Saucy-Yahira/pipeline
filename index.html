@@ -58,7 +58,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Ar
     <div class="leg"><div class="leg-bar" style="background:#1C1C1A"></div>Released</div>
     <div class="leg"><div class="leg-dot" style="background:#ff6d01"></div>FK prod date</div>
     <div class="leg"><div class="leg-dot" style="background:#1D9E75"></div>Stello prod date</div>
-    <div class="leg"><div class="leg-dot" style="background:#f3ff00"></div>WC prod date</div>
+    <div class="leg"><div class="leg-dot" style="background:#ff00d9"></div>WC prod date</div>
     <div class="leg"><div class="leg-today-line"></div>Today</div>
   </div>
 </div>
@@ -159,9 +159,9 @@ function buildChart(skus) {
     if (sku.fk) {
       var ir=sku.stage==="Released";
       addBar(sku.fk,addDays(sku.fk,30),ir?"#1C1C1A":"#E1F5EE",ir?"#1C1C1A":"#1D9E75",ir?"#FFFFFF":"#085041",ir?"Released":"Production");
-      addPin(sku.fk,"#378ADD","FK");
+      addPin(sku.fk,"#ff6d01","FK");
       addPin(sku.stello,"#1D9E75","Stello");
-      addPin(sku.wc,"#7F77DD","WC");
+      addPin(sku.wc,"#ff00d9","WC");
     }
 
     row.appendChild(track); chart.appendChild(row);
